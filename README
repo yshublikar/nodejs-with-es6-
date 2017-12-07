@@ -1,0 +1,25 @@
+ES6 
+
+-tutorial of es6 with nodejs
+
+https://www.youtube.com/watch?v=LtEP_-3a5CY
+
+-command to setup babel so that we can use es6 code in  nodejs
+
+npm install babel-cli babel-register babel-preset-es2015 babel-preset-stage-2 --save -dev
+
+
+-create .babelrc file at root directory and write following code.
+{
+	"presets": ["es2015", "stage-2"]
+}
+
+-then create bin folder and inside bin folder create 2 files called dev(developement) and pro (production)
+
+-write following code inside div file
+
+require('babel-register')
+require('./../server/server') (provide server.js file path)
+
+-to complie run the following code
+nodemon bin/div
